@@ -7,9 +7,13 @@ import com.springboot.commerce.data.entity.Product;
 import com.springboot.commerce.data.repository.ProductRepository;
 import com.springboot.commerce.service.ProductService;
 import java.time.LocalDateTime;
+import java.util.List;
+import java.util.stream.Collectors;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -94,4 +98,26 @@ public class ProductServiceImpl implements ProductService {
         LOGGER.info("[deleteProduct] delete ProductId : {}", number);
         productRepository.deleteById(number);
     }
+
+
+
+    @Override
+    public List<ProductResponseDto> searchProductsByName(String keyword) {
+        LOGGER.info("[searchProductsByName] keyword : {}", keyword);
+        List<Product> foundProducts = productRepository.findByNameContainingIgnoreCase(keyword);
+
+        List<ProductResponseDto> productResponseDtos = foundProducts.stream()
+                .map(product -> {
+                    ProductResponseDto productResponseDto = new ProductResponseDto();
+                    productResponseDto.setNumber(product.getNumber());
+                    productResponseDto.setName(product.getName());
+                    productResponseDto.setPrice(product.getPrice());
+                    productResponseDto.setStock(product.getStock());
+                    return productResponseDto;
+                })
+                .collect(Collectors.toList());
+
+        return productResponseDtos;
+    }
+
 }
