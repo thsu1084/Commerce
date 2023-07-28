@@ -22,7 +22,7 @@
   
 ## ERD
 
-  ![ERD](https://github.com/thsu1084/commerce/assets/98458216/7884ea66-6bf0-4a8a-ad4d-bdf05d67e560)<br>
+  ![최종](https://github.com/thsu1084/commerce/assets/98458216/d6b09d5f-12fb-4f5f-a3ec-117fcea20c58)<br>
 
 ## 사용기술스택<br>
  * SpringBoot
