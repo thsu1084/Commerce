@@ -1,6 +1,6 @@
 package com.springboot.commerce.common;
 
-// 예제 13.27
+
 public enum CommonResponse {
 
     SUCCESS(0, "Success"), FAIL(-1, "Fail");
