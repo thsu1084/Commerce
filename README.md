@@ -32,7 +32,7 @@
  * SpringBoot
  * Java
  * MariaDB
- * Spring Boot JPA
+ * Spring Data JPA
 
 
 
