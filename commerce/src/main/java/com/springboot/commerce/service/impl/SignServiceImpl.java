@@ -16,7 +16,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 
-// 예제 13.25
 @Service
 public class SignServiceImpl implements SignService {
 
