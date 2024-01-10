@@ -11,10 +11,6 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 /**
  * 어플리케이션의 보안 설정
- * 예제 13.19
- *
- * @author Flature
- * @version 1.0.0
  */
 @Configuration
 //@EnableWebSecurity // Spring Security에 대한 디버깅 모드를 사용하기 위한 어노테이션 (default : false)
