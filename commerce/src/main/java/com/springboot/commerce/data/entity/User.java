@@ -24,7 +24,6 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-// 예제 13.5
 @Entity
 @Getter
 @Setter
